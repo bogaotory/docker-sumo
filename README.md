@@ -3,7 +3,7 @@
 [![](https://images.microbadger.com/badges/version/bogaotory/sumo:0.30.0.svg)](https://microbadger.com/images/bogaotory/sumo:0.30.0)
 [![](https://images.microbadger.com/badges/image/bogaotory/sumo:0.30.0.svg)](https://microbadger.com/images/bogaotory/sumo:0.30.0)
 
-A straightforward containerised SUMO solution.
+Containerised SUMO.
 
 [SUMO (Simulation of Urban MObility)](http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki), an open-source traffic simulation software, is dockeried by the `Dockerfile` included in this repository. This image uses Ubuntu version 16.04 and contains version 0.30.0 of SUMO.
 
@@ -17,7 +17,27 @@ See `TraCI` in action:
 
 ![demo TraCI and sumo-gui in docker](https://github.com/bogaotory/docker-sumo/blob/master/docker-sumo-demo2.gif)
 
-## Usage (Option 1) - Build from bogaotory/sumo
+
+## Usage (Option 1) - Build from Ubuntu image (Recommended)
+
+1. Change `your_username` (line 8 of `Dockerfile`) to your username (i.e. the output of `echo "$USER"`)
+2. Build the image with `docker build - < Dockerfile -t docker-sumo`
+3. Run the image with
+```
+docker run -it --rm\
+    --env="DISPLAY" \
+    --volume="/etc/group:/etc/group:ro" \
+    --volume="/etc/passwd:/etc/passwd:ro" \
+    --volume="/etc/shadow:/etc/shadow:ro" \
+    --volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    --user=$USER \
+    docker-sumo \
+    bash
+```
+4. Execute `sumo` or `sumo-gui` as usual.
+
+## Usage (Option 2) - Build from bogaotory/sumo:0.30.0
 
 1. Prepare your own `Dockerfile` with your username (i.e. the output of `echo "$USER"`):
 ```
@@ -40,26 +60,6 @@ docker run -it --rm\
     bash
 ```
 4. Execute `sumo` or `sumo-gui` as usual.
-
-## Usage (Option 2) - Build from Ubuntu image
-
-1. Change `your_username` (line 8 of `Dockerfile`) to your username (i.e. the output of `echo "$USER"`)
-2. Build the image with `docker build - < Dockerfile -t docker-sumo`
-3. Run the image with
-```
-docker run -it --rm\
-    --env="DISPLAY" \
-    --volume="/etc/group:/etc/group:ro" \
-    --volume="/etc/passwd:/etc/passwd:ro" \
-    --volume="/etc/shadow:/etc/shadow:ro" \
-    --volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
-    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-    --user=$USER \
-    docker-sumo \
-    bash
-```
-4. Execute `sumo` or `sumo-gui` as usual.
-
 
 ## References
 I referenced a couple of past attempts of dockerising SUMO:
