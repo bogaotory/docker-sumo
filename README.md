@@ -1,5 +1,6 @@
 # docker-sumo
 
+[![Build Status](https://travis-ci.org/bogaotory/docker-sumo.svg?branch=master)](https://travis-ci.org/bogaotory/docker-sumo)
 [![](https://images.microbadger.com/badges/version/bogaotory/sumo:0.30.0.svg)](https://microbadger.com/images/bogaotory/sumo:0.30.0)
 [![](https://images.microbadger.com/badges/image/bogaotory/sumo:0.30.0.svg)](https://microbadger.com/images/bogaotory/sumo:0.30.0)
 
