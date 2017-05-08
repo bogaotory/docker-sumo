@@ -2,6 +2,5 @@ services:
   - docker
 install:
   - docker build - < Dockerfile -t docker-sumo
-  - docker run -d --name docker-sumo docker-sumo
 script:
-  - docker ps | grep -q docker-sumo
+  - docker run -it --rm docker-sumo sumo | grep 'SUMO Version 0.30.0'
