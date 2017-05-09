@@ -64,6 +64,9 @@ docker run -it --rm\
 ```
 4. Execute `sumo` or `sumo-gui` as usual.
 
+## Additional Dependencies
+[proj](http://proj4.org/) and [gdal](http://www.gdal.org/) are required for users of OpenStreetMap.
+
 ## References
 I referenced a couple of past attempts of dockerising SUMO:
 
