@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER Bo Gao (bogao@dcs.warwick.ac.uk)
 LABEL Description="Dockerised Simulation of Urban MObility(SUMO)"
 
-ENV SUMO_VERSION 0.31.0
+ENV SUMO_VERSION 0.30.0
 ENV SUMO_HOME /opt/sumo
 ENV SUMO_USER your_username
 

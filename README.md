@@ -8,7 +8,7 @@
 
 Containerised SUMO.
 
-[SUMO (Simulation of Urban MObility)](http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki), an open-source traffic simulation software, is dockeried by the `Dockerfile` included in this repository. This image uses Ubuntu version 16.04 and contains version 0.30.0 of SUMO.
+[SUMO (Simulation of Urban MObility)](http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki), an open-source traffic simulation software, is dockeried by the `Dockerfile` included in this repository. This image uses Ubuntu version 16.04 and contains version 0.31.0 of SUMO.
 
 **`sumo`**, **`sumo-gui`** and **`TraCI`** are all accessible with this image.
 
