@@ -3,8 +3,8 @@
 [![Join the chat at https://gitter.im/docker-sumo/Lobby](https://badges.gitter.im/docker-sumo/Lobby.svg)](https://gitter.im/docker-sumo/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Build Status](https://travis-ci.org/bogaotory/docker-sumo.svg?branch=master)](https://travis-ci.org/bogaotory/docker-sumo)
-[![](https://images.microbadger.com/badges/version/bogaotory/sumo:0.30.0.svg)](https://microbadger.com/images/bogaotory/sumo:0.30.0)
-[![](https://images.microbadger.com/badges/image/bogaotory/sumo:0.30.0.svg)](https://microbadger.com/images/bogaotory/sumo:0.30.0)
+[![](https://images.microbadger.com/badges/version/bogaotory/sumo.svg)](https://microbadger.com/images/bogaotory/sumo)
+[![](https://images.microbadger.com/badges/image/bogaotory/sumo.svg)](https://microbadger.com/images/bogaotory/sumo)
 
 Containerised SUMO.
 
